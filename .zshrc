@@ -1,6 +1,8 @@
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local.share}/zinit/zinit.git"
 
+export PATH=$PATH:/home/noss/.local/bin
+
 # Download Zinit
 if [ ! -d "$ZINIT_HOME" ]; then
   mkdir -p "$(dirname $ZINIT_HOME)"
@@ -64,6 +66,7 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 # Aliases
 alias ls='ls --color'
 alias c='clear'
+alias ssh="kitty +kitten ssh"
 
 # Shell integrations
 eval "$(fzf --zsh)"

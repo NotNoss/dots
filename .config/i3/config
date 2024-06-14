@@ -9,7 +9,27 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+# Mod key (windows key)
 set $mod Mod4
+
+# Monitors
+set $one DP-2
+set $two DP-4
+set $three DP-0
+set $four HDMI-0
+
+# Workspaces
+workspace 1 output $one
+workspace 5 output $one
+workspace 2 output $two
+workspace 6 output $two
+workspace 3 output $three
+workspace 7 output $three
+workspace 4 output $four
+workspace 8 output $four
+
+# Set primary monitor
+exec ~/dots/four.sh
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -24,10 +44,13 @@ font pango:monospace 8
 exec --no-startup-id dex --autostart --environment i3
 
 # Set wallpaper
-exec --no-startup-id feh --bg-fill ~/.config/dots/wallpapers/wallhaven-1k26d1.jpg
+exec --no-startup-id feh --bg-fill ~/dots/wallpapers/wallhaven-1k26d1.jpg
 
 # Start Picom
 exec --no-startup-id picom -b
+
+# Start polybar
+exec --no-startup-id ~/.config/polybar/launch.sh
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -61,7 +84,7 @@ bindsym $mod+Return exec kitty
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec --no-startup-id rofi -show drun
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -192,7 +215,9 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+  mode hide
+  hidden_state hide
+  status_command i3status
 	position bottom
 	i3bar_command i3bar --transparency
 
