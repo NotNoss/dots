@@ -61,3 +61,6 @@ mv $dmconfigdir/tokyo-night-sddm/sddm.conf /etc/
 
 # Remove un-needed packages
 pacman --noconfirm -Rns xfce4-terminal
+
+echo "Script has completed. Please Reboot for changes to take effect"
+echo "Remaining steps are run nvim, setup spicetify, setup go-xlr-utility, setup vencord and setup sddm"
