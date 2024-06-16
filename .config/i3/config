@@ -47,7 +47,7 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id feh --bg-fill ~/dots/wallpapers/wallhaven-1k26d1.jpg
 
 # Start Picom
-exec --no-startup-id picom -b
+exec --no-startup-id sleep 10 && picom -b
 
 # Start polybar
 exec --no-startup-id ~/.config/polybar/launch.sh
