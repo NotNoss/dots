@@ -214,22 +214,6 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-  mode hide
-  hidden_state hide
-  status_command i3status
-	position bottom
-	i3bar_command i3bar --transparency
-
-	colors {
-		background #24283b
-		separator #a9b1d6
-
-		focused_workspace #565f89 #565f89 #ffffff
-		active_workspace #565f89 #565f89 #ffffff
-		inactive_workspace #24283b #24283b #ffffff
-	}
-}
 
 # Add inner gaps
 gaps inner 5px
