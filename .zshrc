@@ -2,6 +2,7 @@
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local.share}/zinit/zinit.git"
 
 export PATH=$PATH:/home/noss/.local/bin
+export PATH=$PATH:/home/noss/.cargo/bin
 
 # Download Zinit
 if [ ! -d "$ZINIT_HOME" ]; then
