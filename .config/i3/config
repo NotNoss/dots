@@ -44,7 +44,7 @@ font pango:monospace 8
 exec --no-startup-id dex --autostart --environment i3
 
 # Set wallpaper
-exec --no-startup-id feh --bg-fill ~/dots/wallpapers/wallhaven-1k26d1.jpg
+exec --no-startup-id sleep 10 && feh --bg-fill ~/dots/wallpapers/wallhaven-1k26d1.jpg
 
 # Start Picom
 exec --no-startup-id sleep 10 && picom -b
