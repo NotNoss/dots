@@ -41,9 +41,9 @@ esac
 #     ;;
 # esac
 
-sudo -u $SUDO_USER git clone https://github.com/NotNoss/dots.git /home/$SUDO_USER/dots
-cd /home/$SUDO_USER/dots
-sudo -u $SUDO_USER stow .
+#sudo -u $SUDO_USER git clone https://github.com/NotNoss/dots.git /home/$SUDO_USER/dots
+#cd /home/$SUDO_USER/dots
+#sudo -u $SUDO_USER stow .
 
 # Install from aur
 sudo -u $SUDO_USER yay --noconfirm -S spicetify-cli sddm-theme-tokyonight-git picom-ft-udev betterlockscreen brave-bin i3lock-color oh-my-posh

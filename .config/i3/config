@@ -56,7 +56,7 @@ exec --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id betterlockscreen -u ~/dots/wallpapers/wallhaven-1k26d1.jpg --fx dim
 
 # Auto lock the screen
-exec --no-startup-id xautolock -time 15 -locker 'betterlockscreen -l dim' &
+# exec --no-startup-id xautolock -time 15 -locker 'betterlockscreen -l dim' &
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
